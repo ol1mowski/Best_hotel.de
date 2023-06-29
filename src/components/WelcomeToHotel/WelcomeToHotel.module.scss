@@ -1,0 +1,29 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+    text-align: left;
+    margin-bottom: 3vh;
+}
+
+.header {
+    margin-left: 2vw;
+    font-weight: 400;
+    font-size: 1.8rem;
+    padding-top: 1vh;
+    margin-bottom: 5vh;
+}
+
+.content {
+    margin-left: 2vw;
+    display: block;
+}
+
+.img {
+    width: 75%;
+    height: 40%;
+    margin: 6% auto;
+    display: block;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
