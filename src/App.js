@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Accommodation from './components/Accommodation/Accommodation';
 import Comment from './components/Comment/Comment';
 import Discounts from './components/Discounts/Discounts';
@@ -39,8 +40,21 @@ return (
       <Discounts />
       <Comment />
       <Footer />
+=======
+import React from 'react';
+import './App.css';
+
+function App() {
+return (
+    <div className="App">
+      Hello World
+>>>>>>> 76e589124605ea92be3f1dbc1be1d798b2139fbb
     </div>
   );
 }
 
+<<<<<<< HEAD
 export default App;
+=======
+export default App;
+>>>>>>> 76e589124605ea92be3f1dbc1be1d798b2139fbb
