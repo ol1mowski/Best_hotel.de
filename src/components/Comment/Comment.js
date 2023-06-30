@@ -21,7 +21,7 @@ const wrapper = {
 const Comment = () => {
     return(
         <div style={wrapper}>
-            <img style={background} alt='background'/>
+            <div style={background}></div>
             <h2 className={style.content}>In the Press</h2>
             <Post />
         </div>

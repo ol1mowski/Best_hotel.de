@@ -17,7 +17,7 @@
 
 .box {
     width: 80%;
-    height: 25%;
+    height: 55%;
     border: 2px solid #fff;
     font-weight: 400;
     font-size: 1.5rem;
@@ -34,4 +34,72 @@ h2 {
 
 span {
     margin: 5% 5%;
+}
+
+img {
+    width: 7%;
+    margin: 7% 0;
+}
+
+.locationInfo {
+    font-size: 1rem;
+}
+
+.boxes {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 10%;
+}
+
+.openTimes {
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.infoContainer {
+    margin-left: 7vw;
+}
+
+.socialIcons {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 9vh;
+    img {
+        width: 100%;
+        height: 50%;
+    }
+}
+
+.icon {
+    border: 2px solid #fff;
+    border-radius: 100%;
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 3vw;
+}
+#social {
+    width: 70%;
+    margin-bottom: 2vh;
+}
+
+.tag {
+    border: 2px solid #fff;
+    border-radius: 15px;
+    width: 90%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 3vh;
+    .tagContent {
+        font-size: 1rem;
+    }
 }

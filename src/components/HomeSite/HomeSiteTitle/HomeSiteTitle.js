@@ -1,44 +1,15 @@
-import style from "./HomeSiteTitle.scss"
+import style from "./HomeSiteTitle.module.scss"
 
 const HomeSiteTitle = () => {
-
-    const first = {
-        fontSize: '2.5rem',
-        color: '#fff',
-    }
-    const second = {
-        display: 'flex',
-        alignItems: 'center',
-        height: '15vh',
-        justifyContent: 'center',
-        flexDirection: 'column',
-    }
-    const big = {
-        fontSize: '3rem',
-        // width: '100%',
-        fontWeight: '300',
-        display: 'block',
-    }
-    const small = {
-        marginTop: '-4vh',
-        display: 'block',
-    }
-    const container = {
-        height: '80%',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        flexDirection: 'column',
-    }
     return(
-        <div style={container}>
-            <h2 style={first}> Welcome to</h2>
-            <div style={second}>
-                <span style={big}>
+        <div className={style.container}>
+            <h2 className={style.first}> Welcome to</h2>
+            <div className={style.second}>
+                <span className={style.big}>
                     The Wellhall
                 </span>
             <br /> 
-            <span style={small}>
+            <span className={style.small}>
                 Resort & Spa Hotel
             </span>
             </div>

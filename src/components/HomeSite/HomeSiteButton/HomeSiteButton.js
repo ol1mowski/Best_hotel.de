@@ -1,24 +1,15 @@
-import style from "./HomeSiteButton.scss"
-
+import style from "./HomeSiteButton.module.scss";
 const HomeSiteButton = () => {
+      
 
-    const button = {
-        backgroundColor: '#fff',
-        border: 'none',
-        borderRadius: '15px',
-        width: '50vw',
-        height: '4vh',
-        color: 'brown',
-        fontWeight: 'bold',
-    }
-
-    return(
+    return (
         <div>
-            <button style={button}>
+            <button className={style.button}>
                 Learn more
             </button>
         </div>
-    )
-}
+    );
+};
 
 export default HomeSiteButton;
+

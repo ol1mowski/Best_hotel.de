@@ -7,7 +7,7 @@ const FamilyRoom = () => {
     return(
         <div>
             <div className={style.Wrapper}>
-                <img className={style.img} src={room} alt='room photo' />
+                <img className={style.img} src={room} alt='room' />
                 <div className={style.contentWrapper}>
                     <span className={style.content}>
                         An intriguing caption that describes the room goes here.
@@ -16,7 +16,7 @@ const FamilyRoom = () => {
                 </div>
             </div>
             <div className={style.Wrapper}>
-                <img className={style.img} src={kitchen} alt='kitchen photo' />
+                <img className={style.img} src={kitchen} alt='kitchen' />
                 <div className={style.contentWrapper}>
                     <span className={style.content}>
                     An intriguing caption that describes the room goes here. Use a flattering photo, then describe away!
@@ -24,7 +24,7 @@ const FamilyRoom = () => {
                 </div>
             </div>
             <div className={style.Wrapper}>
-            <img className={style.img} src={bathroom} alt='kitchen photo' />
+            <img className={style.img} src={bathroom} alt='bathroom' />
                 <div className={style.contentWrapper}>
                     <span className={style.content}>
                     An intriguing caption that describes the room goes here. Use a flattering photo, then describe away!

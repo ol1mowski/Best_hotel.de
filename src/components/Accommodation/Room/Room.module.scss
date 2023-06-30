@@ -49,9 +49,13 @@ span {
 
 .button {
     cursor: pointer;
-    border: 1px solid #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 15px;
     display: block;
     margin: 10% auto;
     width: 50%;
-    height: 20%;
+    color: brown;
+    font-weight: bold;
+    height: 3vh;
 }
