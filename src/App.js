@@ -7,10 +7,9 @@ import TheFamilySuit from './components/TheFamilySuit/TheFamilySuit';
 import WelcomeToHotel from './components/WelcomeToHotel/WelcomeToHotel';
 
 const app = {
-    width: '100%',
+    width: '100vw',
     height: '100%',
     backgroundColor: '#f4f1ed',
-    overflow: 'hidden',
 }
 
 const hotelInfo = {

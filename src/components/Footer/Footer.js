@@ -9,7 +9,7 @@ import instagram from '../../assets/icons/instagram.svg';
 const Footer = () => {
     return(
         <div className={style.footer}>
-            <h2>The Wellhall</h2>
+            <h2 className={style.h2}>The Wellhall</h2>
             <div className={style.container}>
             <div className={style.box}>
                 <span>Reservations Office</span>

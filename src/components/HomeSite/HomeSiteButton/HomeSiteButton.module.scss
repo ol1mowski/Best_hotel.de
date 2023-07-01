@@ -1,9 +1,26 @@
 .button {
     background-color: #fff;
+    cursor: pointer;
     border: none;
     border-radius: 15px;
     width: 50vw;
     height: 4vh;
     color: brown;
     font-weight: bold;
+    @media screen and (min-width: 375px) {
+        width: 40vw;
+    }
+    @media screen and (min-width: 475px) {
+        width: 30vw;
+    }
+    @media screen and (min-width: 750px) {
+        width: 20vw;
+    }
+    @media screen and (min-width: 1020px) {
+        width: 15vw;
+    }
+    @media (orientation: landscape) and (min-width: 320px) and (max-width: 950px)  {
+        width: 13vw;
+        height: 7vh;
+    }
 }

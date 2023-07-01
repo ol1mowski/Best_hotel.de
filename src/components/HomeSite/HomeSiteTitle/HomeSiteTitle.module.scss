@@ -1,6 +1,18 @@
 .first {
     font-size: 2.5rem;
+    position: relative;
+    left: 5%;
     color: #fff;
+    @media screen and (min-width: 375px) {
+        font-size: 3rem;
+    }
+    @media screen and (min-width: 600px) {
+        font-size: 4rem;
+        margin-right: 7vw;
+    }
+    @media (orientation: landscape) and (min-width: 320px) and (max-width: 950px)  {
+        font-size: 3rem;
+    }
 }
 
 .second {
@@ -19,10 +31,35 @@
     // width: 100%',
     font-weight: 300;
     display: block;
+    @media screen and (min-width: 375px) {
+        font-size: 3.5rem;
+        margin-top: 9%;
+    }
+    @media screen and (min-width: 500px) {
+        width: 80vw;
+    }
+    @media screen and (min-width: 600px) {
+        font-size: 4rem;
+        margin: 0;
+    }
+    @media screen and (min-width: 750px) {
+        margin-top: 10vh;
+    }
+    @media (orientation: landscape) and (min-width: 320px) and (max-width: 950px)  {
+        font-size: 2rem;
+        margin-top: 1%;
+    }
 }
 
 .small {
     display: block;
+    @media screen and (min-width: 600px) {
+        font-size: 1.5rem;
+    }
+    @media (orientation: landscape) and (min-width: 320px) and (max-width: 950px)  {
+        font-size: 1rem;
+        margin: 0;
+    }
 }
 
 .container {

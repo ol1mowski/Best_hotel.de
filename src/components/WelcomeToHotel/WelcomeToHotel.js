@@ -4,7 +4,7 @@ import style from './WelcomeToHotel.module.scss';
 const WelcomeToHotel = () => {
 
     return(
-        <div className={style.container}>
+        <div className={style.container} id='more'>
             <h2 className={style.header}>
                 Welcome to your <br /> luxurious home away <br /> from home 
             </h2>

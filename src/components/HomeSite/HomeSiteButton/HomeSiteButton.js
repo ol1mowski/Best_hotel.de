@@ -4,9 +4,11 @@ const HomeSiteButton = () => {
 
     return (
         <div>
-            <button className={style.button}>
-                Learn more
-            </button>
+            <a href="#more">
+                <button className={style.button}>
+                    Learn more
+                </button>
+            </a>
         </div>
     );
 };
