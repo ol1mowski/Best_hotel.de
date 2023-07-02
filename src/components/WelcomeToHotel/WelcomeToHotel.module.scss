@@ -1,29 +1,136 @@
 .container {
-    overflow-x: hidden;
+    color: #623e2a;
+    overflow: hidden;
     width: 100vw;
     height: 100vh;
     margin: 0 auto;
     text-align: left;
-    margin-bottom: 3vh;
+
+    @media screen and (min-width: 550px) {
+        height: 110vh;
+    }
+    @media screen and (min-width: 1024px) {
+        display: flex;
+        justify-content: center;
+        margin-top: 10%;
+        align-items: start;
+        // flex-direction: column;
+    }
+    @media screen and (min-width: 1024px) {
+        height: 70vh;
+    }
+    @media (orientation: landscape) and (min-height: 320px) and (max-width: 950px) {
+        height: 220vh;
+    }
+    @media (orientation: landscape) and (min-height: 550px) and (max-width: 950px) {
+        height: 100vh;
+    }
 }
 
 .header {
     font-weight: 400;
     font-size: 1.8rem;
-    margin-bottom: 10vh;
+    margin: 17% 7%;
+    @media screen and (min-width: 400px) {
+        margin: 14% 8%;
+    }
+    @media screen and (min-width: 700px) {
+        margin: 10% 7%;
+    }
+    @media screen and (min-width: 1024px) {
+        font-size: 2.3rem;
+    }
+    @media screen and (min-width: 1200px) {
+        font-size: 2.7rem;
+    }
+    @media screen and (min-width: 1400px) {
+        font-size: 3rem;
+    }
+    @media (orientation: landscape) and (min-width: 320px) and (max-width: 950px) {
+        margin: 7% 7%;
+    }
 }
 
 .content {
-    margin-left: 4vw;
+    margin: 20% 4%;
+    @media screen and (min-width: 400px) {
+        margin: 14% 8%;
+    }
     display: block;
+    @media screen and (min-width: 600px) {
+        font-size: 1.1rem;
+    }
+    @media screen and (min-width: 700px) {
+        margin: 10% 7%;
+    }
+    @media screen and (min-width: 850px) {
+        margin-right: 20%;
+    }
+    @media screen and (min-width: 1024px) {
+        margin-right: 10%;
+        line-height: 3vh;
+        font-weight: 600;
+    }
+    @media screen and (min-width: 1400px) {
+        font-size: 1.3rem;
+    }
+    @media (orientation: landscape) and (min-width: 320px) and (max-width: 950px) {
+        margin: 7% 7%;
+        margin-right: 20%;
+    }
 }
 
+.image {
+    height: 35%;
+    @media screen and (min-width: 1024px) {
+        height: 60%;
+        margin-top: 3%;
+    }
+    @media screen and (min-width: 1400px) {
+        height: 70%;
+        margin-top: 0;
+    }
+    @media screen and (min-width: 1700px) {
+       margin-top: 10vh;
+       height: 65%;
+    }
+}
+
+.strings, .image {
+    @media screen and  (min-width: 1024px) {
+        display: inline-block;
+        width: 40%;
+    }
+}
 
 .img {
     width: 75%;
-    height: 40%;
+    height: 100%;
     margin: 6% auto;
     display: block;
-    border-radius: 10px;
+    border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    @media screen and (min-width: 400px) {
+        width: 60%;
+    }
+    @media screen and (min-width: 500px) {
+        width: 50%;
+    }
+    @media screen and (min-width: 750px) {
+        width: 40%;
+    }
+    @media screen and (min-width: 1024px) {
+        width: 80%;
+    }
+    @media screen and (min-width: 1200px) {
+        width: 75%;
+        margin-right: 3%;
+    }
+    @media screen and (min-width: 1700px) {
+        position: relative;
+        bottom: 19%;
+    }
+    @media (orientation: landscape) and (min-width: 320px) and (max-width: 950px) {
+        width: 40%;
+    }
 }
