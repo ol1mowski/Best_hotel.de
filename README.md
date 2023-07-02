@@ -1,6 +1,7 @@
 # Hotel React app
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![hotel_image](https://github.com/ol1mowski/Beast_hotel.de/assets/101707516/e37bdf2c-7662-41f4-9f6a-e1eb1270ff5a)
+
 
 ## Available Scripts
 
