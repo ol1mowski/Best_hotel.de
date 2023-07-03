@@ -22,7 +22,7 @@ const hotelInfo = {
     price: 'from $209 a night',
   },
   three: {
-    name: 'The Wellhall Family Suite',
+    name: 'The Wellhall Family',
     price: 'from $399 a night',
   }
 }

@@ -9,7 +9,7 @@ const Room = (props) => {
     console.log()
 
     return(
-        <>
+        <div className={style.roomWrapper}>
             <div className={style.container}>
             <img className={style.img} src={imgOne} alt='example hotel room' />
             <div className={style.roomInfo}>
@@ -55,7 +55,7 @@ const Room = (props) => {
                 <button className={style.button}>Book now</button>
             </div>
         </div>
-        </>
+        </div>
         
     )
 }

@@ -15,12 +15,48 @@
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     margin-bottom: 10%;
+    @media screen and (min-width: 375px) {
+        width: 70%;
+    }
+    @media screen and (min-width: 500px) {
+        width: 65%;
+    }
+    @media screen and (min-width: 650px) {
+        width: 55%;
+    }
+    @media screen and (min-width: 750px) {
+        width: 50%;
+    }
+    @media screen and (min-width: 1024px) {
+        width: 80%; 
+    }
+    @media (orientation: landscape) and (min-height: 320px) and (max-width: 950px) {
+        width: 40%;
+    }
 }
 
 .roomInfo {
     height: 60%;
     width: 80%;
     border: 2px solid #000;
+    @media screen and (min-width: 375px) {
+        width: 70%;
+    }
+    @media screen and (min-width: 500px) {
+        width: 65%;
+    }
+    @media screen and (min-width: 650px) {
+        width: 55%;
+    }
+    @media screen and (min-width: 750px) {
+        width: 50%;
+    }
+    @media screen and (min-width: 1024px) {
+        width: 80%; 
+    }
+    @media (orientation: landscape) and (min-height: 320px) and (max-width: 950px) {
+        width: 40%;
+    }
 }
 
 span {
@@ -58,4 +94,31 @@ span {
     color: brown;
     font-weight: bold;
     height: 3vh;
+    @media screen and (min-width: 375px) {
+        width: 40%;
+        height: 4vh;
+    }
+    @media screen and (min-width: 550px) {
+        width: 30%;
+    }
+    @media (orientation: landscape) and (min-height: 320px) and (max-width: 950px) {
+        width: 40%;
+        height: 9vh;
+    }
+    @media (orientation: landscape) and (min-height: 450px) and (max-width: 950px) {
+        height: 7vh;
+        width: 35%;
+    }
+    @media (orientation: landscape) and (min-height: 450px) and (max-width: 950px) {
+        height: 5vh;
+        width: 35%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .roomWrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
