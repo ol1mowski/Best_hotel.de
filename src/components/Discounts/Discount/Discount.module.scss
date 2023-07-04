@@ -4,17 +4,50 @@
     height: 80%;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    margin: 4% 7%;
+    margin: 4% auto;
     display: block;
+    @media screen and (min-width: 350px) {
+        width: 70%;
+    }
+    @media screen and (min-width: 500px) {
+        width: 60%;
+    }
+    @media screen and (min-width: 650px) {
+        width: 50%;
+    }
+    @media screen and (min-width: 800px) {
+        width: 45%;
+    }
+    @media screen and (min-width: 1024px) {
+        width: 90%;
+    }
 }
 .contentWrapper {
-    border: 2px solid #000;
+    border: 2px solid #623e2a;
     margin: 20% 7%;
-    padding: 5% 7%;
+
+    @media screen and (min-width: 350px) {
+        margin: 20% 10%;
+    }
+    @media screen and (min-width: 500px) {
+        margin: 20% 20%;
+    }
+    @media screen and (min-width: 650px) {
+        margin: 10% 25%;
+    }
+    @media screen and (min-width: 800px) {
+        margin: 10% 27%;
+    }
+    @media screen and (min-width: 1024px) {
+        margin: 20% 10%;
+    }
 }
 
 .Wrapper {
     margin-bottom: 30%;
+    @media screen and (min-width: 650px) {
+        margin-bottom: 20%;
+    }
 }
 
 .contentHeader {

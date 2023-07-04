@@ -1,6 +1,24 @@
+.container {
+    height: 100%;
+}
+
 .header {
     font-size: 2.2rem;
-    font-weight: 300;
+    font-weight: 350;
     margin-left: 5vw;
     margin-bottom: 10%;
+    @media screen and (min-width: 550px) {
+        font-size: 2.7rem;
+    }
+    @media screen and (min-width: 800px) {
+        font-size: 3.2rem;
+    }
+}
+
+.discountWrappper {
+    @media screen and (min-width: 1024px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }

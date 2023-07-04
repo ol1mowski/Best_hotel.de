@@ -31,21 +31,23 @@ const Discounts = () => {
     return(
         <div className={style.container}>
             <h2 className={style.header}>Promos and Offers</h2>
-            <Discount 
-            title={discount[0].title}
-            more={discount[0].more}
-            img={discount[0].img}
-            />
-            <Discount 
-            title={discount[1].title}
-            more={discount[1].more}
-            img={discount[1].img}
-            />
-            <Discount 
-            title={discount[2].title}
-            more={discount[2].more}
-            img={discount[2].img}
-            />
+            <div className={style.discountWrappper}>
+                <Discount 
+                title={discount[0].title}
+                more={discount[0].more}
+                img={discount[0].img}
+                />
+                <Discount 
+                title={discount[1].title}
+                more={discount[1].more}
+                img={discount[1].img}
+                />
+                <Discount 
+                title={discount[2].title}
+                more={discount[2].more}
+                img={discount[2].img}
+                />
+            </div>
         </div>
     )
 }
