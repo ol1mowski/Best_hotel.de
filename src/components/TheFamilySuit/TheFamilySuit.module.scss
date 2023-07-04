@@ -36,15 +36,18 @@
     @media screen and (min-width: 600px) {
         margin-bottom: 7%;
     }
+    @media screen and (min-width: 1024px) {
+        font-size: 3.5rem;
+    }
 }
 
 .description {
-    margin: 7% 7%;
+    margin: 20% 7%;
     @media screen and (min-width: 375px) {
         margin: 15% 10%;
     }
     @media screen and (min-width: 500px) {
-        margin: 0 10%;
+        margin: 10% 10%;
         font-weight: 600;
     }
     @media screen and (min-width: 800px) {
@@ -75,5 +78,16 @@
 @media screen and (min-width: 1200px) {
     .header {
         font-size: 4.3rem;
+    }
+}
+
+
+@media screen and (min-width: 1024px) {
+    .furniture {
+        margin-top: 7vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10vw;
     }
 }

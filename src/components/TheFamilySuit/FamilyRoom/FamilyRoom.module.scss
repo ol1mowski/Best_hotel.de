@@ -3,20 +3,66 @@
 }
 
 .img {
-    margin-top: 5vh;
     width: 80%;
     height: 80%;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    margin: 0 7%;
+    margin: 0 auto;
     display: block;
+    @media screen and (min-width: 350px) {
+        width: 70%;
+    }
+    @media screen and (min-width: 500px) {
+        width: 60%;
+    }
+    @media screen and (min-width: 650px) {
+        width: 50%;
+    }
+    @media screen and (min-width: 800px) {
+        width: 40%;
+    }
+    @media screen and (min-width: 1024px) {
+        width: 75%;
+        height: 35vh;
+    }
+    @media screen and (min-width: 1700px) {
+        width: 80%;
+    }
 }
 .contentWrapper {
-    border: 2px solid #000;
-    margin: 7% 7%;
-    padding: 5% 7%;
+    border: 2px solid #623e2a;
+    margin: 7% 10%;
+    @media screen and (min-width: 350px) {
+        margin: 7% 15%;
+    }
+    @media screen and (min-width: 500px) {
+        margin: 7% 20%;
+    }
+    @media screen and (min-width: 650px) {
+        margin: 7% 25%;
+    }
+    @media screen and (min-width: 800px) {
+        margin: 7% 30%;
+    }
+    @media screen and (min-width: 1024px) {
+        margin: 7% 15%;
+    }
 }
 
 .Wrapper {
     margin-bottom: 30%;
+    @media screen and (min-width: 500px) {
+        margin-bottom: 20%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    #firstImg {
+        height: 80%;
+        width: 90%;
+    }
+    
+    #firstBorder {
+        margin: 20% 7%;
+    }
 }
