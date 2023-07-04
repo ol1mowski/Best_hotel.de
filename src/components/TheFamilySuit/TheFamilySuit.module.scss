@@ -1,5 +1,27 @@
 .container {
-    height: 200vh;
+    height: 100%;
+    // @media screen and (min-width: 350px) {
+    //     height: 260vh;
+    // }
+    // @media screen and (min-width: 570px) {
+    //     height: 270vh;
+    // }
+    // @media screen and (min-width: 930px) {
+    //     height: 290vh;
+    // }
+    // @media screen and (min-width: 1024px) {
+    //     height: 150vh;
+    // }
+    // @media screen and (min-width: 1300px) {
+    //     height: 180vh;
+    // }
+    // @media (orientation: landscape) and (max-height: 320px) and (max-width: 850px) {
+    //     height: 700vh;
+    // }
+    // @media (orientation: landscape) and (max-height: 320px) and (max-width: 850px) {
+    //     height: 500vh;
+    // }
+
 }
 
 
@@ -7,9 +29,51 @@
     font-size: 3.2rem;
     font-weight: 300;
     margin-left: 5vw;
-    margin-bottom: 40%;
+    margin-bottom: 20%;
+    @media screen and (min-width: 500px) {
+        margin-bottom: 13%;
+    }
+    @media screen and (min-width: 600px) {
+        margin-bottom: 7%;
+    }
 }
 
 .description {
     margin: 7% 7%;
+    @media screen and (min-width: 375px) {
+        margin: 15% 10%;
+    }
+    @media screen and (min-width: 500px) {
+        margin: 0 10%;
+        font-weight: 600;
+    }
+    @media screen and (min-width: 800px) {
+        margin-right: 20%;
+    }
+    @media screen and (min-width: 1200px) {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .img, .string {
+        width: 40%;
+        display: inline-block;
+    }
+    .header {
+        margin-bottom: 30%;
+        font-size: 3.5rem;
+    }
+    .img, .string {
+        margin-left: 7%;
+    }
+    .description {
+        margin-left: 10%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .header {
+        font-size: 4.3rem;
+    }
 }
