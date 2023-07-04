@@ -36,9 +36,6 @@
     @media screen and (min-width: 600px) {
         margin-bottom: 7%;
     }
-    @media screen and (min-width: 1024px) {
-        font-size: 3.5rem;
-    }
 }
 
 .description {
@@ -80,7 +77,11 @@
         font-size: 4.3rem;
     }
 }
-
+@media screen and (min-width: 1700px) {
+    .header {
+        font-size: 4.5rem;
+    }
+}
 
 @media screen and (min-width: 1024px) {
     .furniture {
