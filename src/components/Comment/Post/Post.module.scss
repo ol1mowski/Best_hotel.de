@@ -2,13 +2,14 @@
     background-color: antiquewhite;
     border-radius: 15px;
     padding-bottom: 5%;
-    margin: 0 10% 20% 10%;
+    margin: 30% 7% 0 7%;
+    // margin: 0 10% 20% 10%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     @media screen and (min-width: 350px) {
-        margin: 0 30% 20% 30%;
+        margin: 0 15% 20% 15%;
     } 
     @media screen and (min-width: 550px) {
         margin: 0 20% 20% 20%;
