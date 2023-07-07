@@ -1,48 +1,66 @@
-
-import HomeSiteTitle from "./HomeSiteTitle/HomeSiteTitle";
-import MainPhoto from '../../assets/pictures/Main_photo.png';
+import React, { useRef, useEffect } from 'react';
+import HomeSiteTitle from './HomeSiteTitle/HomeSiteTitle';
+import MainVideo from '../../assets/main_video.mp4';
 import style from './HomeSite.module.scss';
-import HomeSiteButton from "./HomeSiteButton/HomeSiteButton";
+import HomeSiteButton from './HomeSiteButton/HomeSiteButton';
 
-const background = {
-    backgroundImage: `url(${MainPhoto})`,
-    backgroundSize: 'cover',
-    backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'center',
+const HomeSite = () => {
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+
+    const handlePlayVideo = () => {
+      if (video.paused) {
+        video.play();
+      }
+    };
+
+    const handleDocumentClick = () => {
+      handlePlayVideo();
+      document.removeEventListener('click', handleDocumentClick);
+    };
+
+    video.addEventListener('loadeddata', () => {
+      document.addEventListener('click', handleDocumentClick);
+    });
+
+    return () => {
+      video.removeEventListener('loadeddata', () => {
+        document.removeEventListener('click', handleDocumentClick);
+      });
+    };
+  }, []);
+
+  const background = {
     width: '100vw',
     height: '100vh',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    filter: 'contrast(60%)',
-};
-// const items = {
-//     width: '100%',
-//     height: '100%',
-//     background: 'white',
-//     display: 'flex',
-//     alignItems: 'center',
-//     justifyContent: 'start',
-//     flexDirection: 'column',
-//     color: '#fff',
-//     position: 'absolute',
-//     top: 0,
-//     left: 0,
-//     right: 0,
-//     bottom: 0,
-// }
+    position: 'relative',
+  };
 
-const HomeSite = () => {
-    return (
-        <>
-            <div style={background}> </div>
-            <div className={style.items}>
-                <HomeSiteTitle />  
-                <HomeSiteButton />
-            </div>
-        </>
-        
-    );
+  const videoStyle = {
+    width: '100%',
+    height: '100%',
+    objectFit: 'cover',
+    pointerEvents: 'none', // Dodaj tę właściwość, aby wyłączyć zdarzenia dla elementu wideo
+  };
+
+  return (
+    <>
+      <div style={background}>
+        <video ref={videoRef} style={videoStyle} autoPlay muted loop playsInline>
+          <source src={MainVideo} type="video/mp4" />
+        </video>
+      </div>
+      <div className={style.items}>
+        <HomeSiteTitle />
+        <HomeSiteButton />
+      </div>
+    </>
+  );
 };
 
 export default HomeSite;
