@@ -6,7 +6,10 @@ import style from './WelcomeToHotel.module.scss';
 
 const WelcomeToHotel = () => {
   const controls = useAnimation();
-  const [ref, inView] = useInView();
+  const [ref, inView] = useInView({
+    triggerOnce: true, // Animacja zostanie uruchomiona tylko raz
+    threshold: 0.5, // Przewinięcie do połowy strony
+  });
 
   useEffect(() => {
     if (inView) {
@@ -16,12 +19,12 @@ const WelcomeToHotel = () => {
 
   const containerVariants = {
     hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { duration: 3 } },
+    visible: { opacity: 1, transition: { duration: 1 } },
   };
 
   const imageVariants = {
     hidden: { opacity: 0, scale: 0 },
-    visible: { opacity: 1, scale: 1, transition: { duration: 2, delay: 0.2 } },
+    visible: { opacity: 1, scale: 1, transition: { duration: 1, delay: 0.2 } },
   };
 
   return (

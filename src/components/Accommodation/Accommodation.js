@@ -8,6 +8,7 @@ const Accommodation = (props) => {
   const controls = useAnimation();
   const [ref, inView] = useInView({
     triggerOnce: true, // Animacja zostanie uruchomiona tylko raz
+    rootMargin: '0px 0px -50% 0px', // Przesunięcie granicy obserwacji, -50% od dołu komponentu
   });
 
   useEffect(() => {
@@ -18,7 +19,7 @@ const Accommodation = (props) => {
 
   const containerVariants = {
     hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0, transition: { duration: 1 } },
+    visible: { opacity: 1, y: 0, transition: { duration: 1.3 } },
   };
 
   return (
