@@ -1,6 +1,5 @@
 # Hotel React app
-
-![hotel_image](https://github.com/ol1mowski/Beast_hotel.de/assets/101707516/e37bdf2c-7662-41f4-9f6a-e1eb1270ff5a)
+![www](https://github.com/ol1mowski/Best_hotel.de/assets/101707516/0d916a1a-fefa-47af-b2ca-d747f8450df4)
 
 
 ## Available Scripts
