@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, lazy } from 'react';
 import HomeSiteTitle from './HomeSiteTitle/HomeSiteTitle';
 import MainVideo from '../../assets/main_video.mp4';
 import style from './HomeSite.module.scss';
@@ -51,7 +51,7 @@ const HomeSite = () => {
   return (
     <>
       <div style={background}>
-        <video ref={videoRef} style={videoStyle} autoPlay muted loop playsInline>
+        <video onLoad={lazy} ref={videoRef} style={videoStyle} autoPlay muted loop playsInline>
           <source src={MainVideo} type="video/mp4" />
         </video>
       </div>
