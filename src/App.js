@@ -3,6 +3,7 @@ import Comment from './components/Comment/Comment';
 import Discounts from './components/Discounts/Discounts';
 import Footer from './components/Footer/Footer';
 import HomeSite from './components/HomeSite/HomeSite';
+// import ReservationSite from './components/ReservationSite/ReservationSite';
 import TheFamilySuit from './components/TheFamilySuit/TheFamilySuit';
 import WelcomeToHotel from './components/WelcomeToHotel/WelcomeToHotel';
 
@@ -15,15 +16,15 @@ const app = {
 const hotelInfo = {
   first: {
     name: 'De Luxe Room',
-    price: 'from $189 a night',
+    price: 189,
   },
   second: {
     name: 'De Luxe Sea View',
-    price: 'from $209 a night',
+    price: 209,
   },
   three: {
     name: 'The Wellhall Family',
-    price: 'from $399 a night',
+    price: 399,
   }
 }
 
@@ -39,6 +40,10 @@ const App = () => {
     <Discounts />
     <Comment />
     <Footer />
+    {/* <ReservationSite
+      header={hotelInfo.first.name} 
+      price={hotelInfo.first.price}
+    /> */}
     </div>
   )
 }

@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, lazy } from 'react';
 import HomeSiteTitle from './HomeSiteTitle/HomeSiteTitle';
-import MainVideo from '../../assets/main_video.av1';
+import MainVideo from '../../assets/main_video.mp4';
 import style from './HomeSite.module.scss';
 import HomeSiteButton from './HomeSiteButton/HomeSiteButton';
 
