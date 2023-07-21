@@ -1,9 +1,9 @@
 {
   "files": {
-    "main.css": "/Best_hotel.de/static/css/main.ee36e0e4.css",
-    "main.js": "/Best_hotel.de/static/js/main.21f3749a.js",
+    "main.css": "/Best_hotel.de/static/css/main.31ef37fe.css",
+    "main.js": "/Best_hotel.de/static/js/main.1cb62403.js",
     "static/js/787.c1112931.chunk.js": "/Best_hotel.de/static/js/787.c1112931.chunk.js",
-    "static/media/main_video.av1": "/Best_hotel.de/static/media/main_video.6f7ba9605aa01300eef2.av1",
+    "static/media/main_video.mp4": "/Best_hotel.de/static/media/main_video.399f86c9af22569f66a0.mp4",
     "static/media/hotel_room.png": "/Best_hotel.de/static/media/hotel_room.9989e70380e8edceac05.png",
     "static/media/spa.png": "/Best_hotel.de/static/media/spa.9e53159594ef50de77fd.png",
     "static/media/bathroom.png": "/Best_hotel.de/static/media/bathroom.d91c20c91320bbdb464c.png",
@@ -13,21 +13,25 @@
     "static/media/kitchen.png": "/Best_hotel.de/static/media/kitchen.346dfef862c4dda966a2.png",
     "static/media/tourist_with_suitcase.png": "/Best_hotel.de/static/media/tourist_with_suitcase.cf3ce6c9f8bdb4f02ba8.png",
     "static/media/booking_online.png": "/Best_hotel.de/static/media/booking_online.abac4d9ff87b9b711148.png",
+    "static/media/loading_photo.jpg": "/Best_hotel.de/static/media/loading_photo.0a65c33f5d99e5bedd50.jpg",
     "static/media/tourist-cutout.png": "/Best_hotel.de/static/media/tourist-cutout.07184096eedf5228529e.png",
+    "static/media/loading.gif": "/Best_hotel.de/static/media/loading.4ace5f172a45b15a8274.gif",
     "static/media/instagram.svg": "/Best_hotel.de/static/media/instagram.116ad97e1f8e0638fcb7d5aed6800697.svg",
     "static/media/twitter.svg": "/Best_hotel.de/static/media/twitter.0407223bb7bca83e1349f743cc8849a2.svg",
     "index.html": "/Best_hotel.de/index.html",
     "static/media/quote.svg": "/Best_hotel.de/static/media/quote.0db0a8d3b4210d2dd51e7a3e208d221c.svg",
     "static/media/facebook.svg": "/Best_hotel.de/static/media/facebook.d0e6c35f87cabc4c3d016b72ba214d1f.svg",
     "static/media/mail.svg": "/Best_hotel.de/static/media/mail.6345f82ededa4dc800949734956dc764.svg",
+    "static/media/arrow-right.svg": "/Best_hotel.de/static/media/arrow-right.cbce83ae8b964c3a8379692addc45f5f.svg",
+    "static/media/arrow-left.svg": "/Best_hotel.de/static/media/arrow-left.261fc5b9e874e6b41662b6f4cb9bbc60.svg",
     "static/media/location.svg": "/Best_hotel.de/static/media/location.2e0ef750ef3975644482ba424ba65ae0.svg",
     "static/media/telephone.svg": "/Best_hotel.de/static/media/telephone.97b3a6ef5f6a999380bead626212f45f.svg",
-    "main.ee36e0e4.css.map": "/Best_hotel.de/static/css/main.ee36e0e4.css.map",
-    "main.21f3749a.js.map": "/Best_hotel.de/static/js/main.21f3749a.js.map",
+    "main.31ef37fe.css.map": "/Best_hotel.de/static/css/main.31ef37fe.css.map",
+    "main.1cb62403.js.map": "/Best_hotel.de/static/js/main.1cb62403.js.map",
     "787.c1112931.chunk.js.map": "/Best_hotel.de/static/js/787.c1112931.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ee36e0e4.css",
-    "static/js/main.21f3749a.js"
+    "static/css/main.31ef37fe.css",
+    "static/js/main.1cb62403.js"
   ]
 }
