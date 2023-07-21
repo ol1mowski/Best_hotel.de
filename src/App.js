@@ -1,52 +1,36 @@
-import Accommodation from './components/Accommodation/Accommodation';
-import Comment from './components/Comment/Comment';
-import Discounts from './components/Discounts/Discounts';
-import Footer from './components/Footer/Footer';
-import HomeSite from './components/HomeSite/HomeSite';
-// import ReservationSite from './components/ReservationSite/ReservationSite';
-import TheFamilySuit from './components/TheFamilySuit/TheFamilySuit';
-import WelcomeToHotel from './components/WelcomeToHotel/WelcomeToHotel';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom';
+import HomePage from './HomePage/HomePage';
+import ReservationSite from './components/ReservationSite/ReservationSite';
 
 const app = {
-    width: '100vw',
-    height: '100%',
-    backgroundColor: '#f4f1ed',
-}
-
-const hotelInfo = {
-  first: {
-    name: 'De Luxe Room',
-    price: 189,
-  },
-  second: {
-    name: 'De Luxe Sea View',
-    price: 209,
-  },
-  three: {
-    name: 'The Wellhall Family',
-    price: 399,
-  }
-}
-
-
+  width: '100vw',
+  height: '100%',
+  backgroundColor: '#f4f1ed',
+};
 
 const App = () => {
-  return(
+  return (
     <div style={app}>
-    <HomeSite /> 
-    <WelcomeToHotel />
-    <Accommodation hotel={hotelInfo}/>
-    <TheFamilySuit />
-    <Discounts />
-    <Comment />
-    <Footer />
-    {/* <ReservationSite
-      header={hotelInfo.first.name} 
-      price={hotelInfo.first.price}
-    /> */}
+      <Router>
+        <Routes>
+          <Route path="/home" element={<HomePage />} />
+          <Route path="/reservation" element={<ReservationSite />} />
+          {/* Default route for the homepage */}
+          <Route path="/Best_hotel.de" element={<HomeRedirect />} />
+        </Routes>
+      </Router>
     </div>
-  )
-}
+  );
+};
 
+const HomeRedirect = () => {
+  const navigate = useNavigate();
+  React.useEffect(() => {
+    navigate('/home');
+  }, [navigate]);
+
+  return null; // You can return any loading indicator here if needed
+};
 
 export default App;

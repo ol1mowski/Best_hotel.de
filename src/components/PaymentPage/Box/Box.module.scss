@@ -1,0 +1,57 @@
+.container {
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media screen and (min-width: 1024px) {
+        width: 100%;
+    }
+
+    &__data {
+        background-color: rgba(128, 128, 128, 0.329);
+        width: 90%;
+        height: 70%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-top-right-radius: 15px;
+
+        @media screen and (min-width: 350px) {
+            width: 80%;
+        }
+
+        @media screen and (min-width: 475px) {
+            width: 70%;
+        }
+
+        @media screen and (min-width: 650px) {
+            width: 60%;
+        }
+
+        @media screen and (min-width: 850px) {
+            width: 50%;
+        }
+
+        @media screen and (min-width: 900px) {
+            width: 40%;
+        }
+        @media screen and (min-width: 1024px) {
+            width: 80%;
+        }
+
+        h2 {
+            margin-left: 5%;
+            display: block;
+            font-size: 1.7rem;
+            font-weight: 400;
+        }
+
+        &__image {
+            float: right;
+            margin-right: 7%;
+            display: block;
+            width: 6%;
+        }
+    }
+}

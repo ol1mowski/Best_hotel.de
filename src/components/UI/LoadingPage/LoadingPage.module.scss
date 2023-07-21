@@ -1,0 +1,44 @@
+.container {
+    background-image: url('../../../assets/pictures/loading_photo.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textWrapper {
+    width: 90%;
+    height: 40%;
+    color: #fff;
+    font-size: 3.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    gap: 10%;
+    @media screen and (min-width: 600px) {
+        gap: 20%;
+    }
+}
+
+img {
+    width: 20%;
+    height: 20%;
+    @media screen and (min-width: 550px) {
+        width: 15%;
+    }
+    @media screen and (min-width: 700px) {
+        width: 10%;
+    }
+    @media screen and (min-width: 1100px) {
+        width: 7%;
+    }
+    @media screen and (min-width: 1800px) {
+        width: 5%;
+    }
+}
