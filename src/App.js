@@ -14,7 +14,7 @@ const App = () => {
     <div style={app}>
       <Router>
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route path="/Best_hotel.de" element={<HomePage />} />
           <Route path="/reservation" element={<ReservationSite />} />
           {/* Default route for the homepage */}
         </Routes>

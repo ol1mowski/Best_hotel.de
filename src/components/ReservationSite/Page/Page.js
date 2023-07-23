@@ -167,6 +167,18 @@ const Page = () => {
     }
   }, [selectedCheckInDate]);
 
+  // useEffect(() => {
+
+  //   const addInfo = () => {
+  //     console.log(amountOfGuests.current.value);
+  //   }
+
+  //   payButton.current.addEventListener('click', addInfo);
+  //   return(() => {
+  //     payButton.current.removeEventListener('click', addInfo);
+  //   });
+  // }, [])
+
 
   return (
     <div className={style.wrapper}>
@@ -236,7 +248,7 @@ const Page = () => {
           </form>
         </div>
       </div>
-      <Link to='/'>Back to homepage</Link>
+      <Link to='/Best_hotel.de/'>Back to homepage</Link>
       <p className={style.copy}>© Copyright 2023. Made by Oliwier Markiewicz</p>
     </div>
   );
