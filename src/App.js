@@ -14,23 +14,13 @@ const App = () => {
     <div style={app}>
       <Router>
         <Routes>
-          <Route path="/home" element={<HomePage />} />
+          <Route path="/" element={<HomePage />} />
           <Route path="/reservation" element={<ReservationSite />} />
           {/* Default route for the homepage */}
-          <Route path="/Best_hotel.de" element={<HomeRedirect />} />
         </Routes>
       </Router>
     </div>
   );
-};
-
-const HomeRedirect = () => {
-  const navigate = useNavigate();
-  React.useEffect(() => {
-    navigate('/home');
-  }, [navigate]);
-
-  return null; // You can return any loading indicator here if needed
 };
 
 export default App;

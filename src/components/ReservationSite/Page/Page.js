@@ -236,7 +236,7 @@ const Page = () => {
           </form>
         </div>
       </div>
-      <Link to='/home'>Back to homepage</Link>
+      <Link to='/'>Back to homepage</Link>
       <p className={style.copy}>© Copyright 2023. Made by Oliwier Markiewicz</p>
     </div>
   );
