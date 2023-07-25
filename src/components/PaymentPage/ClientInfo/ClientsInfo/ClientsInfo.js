@@ -102,7 +102,7 @@ const ClientsInfo = () => {
           )}
         </div>
         <div className={style.container__form__formGroup}>
-          <button className={style.container__form__formGroup__button} type="submit">Submit</button>
+          <button className={style.container__form__formGroup__button} type="submit">Save</button>
         </div>
       </form>
     </div>

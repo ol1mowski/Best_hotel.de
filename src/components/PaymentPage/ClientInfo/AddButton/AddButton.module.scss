@@ -1,0 +1,15 @@
+.addContainer {
+    width: 16vw;
+    height: 7vh;
+    border-radius: 100%;
+    border: 2px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15% auto;
+    &__img {
+        width: 30%;
+        height: 30%;
+        display: block;
+    }
+}

@@ -9,7 +9,7 @@ import kitchen from '../../../assets/pictures/kitchen.png';
 import bathroom from '../../../assets/pictures/bathroom.png';
 import { Link } from 'react-router-dom';
 
-const Page = () => {
+const Page = (props) => {
   // Minimal date in the calender
   const minDate = new Date().toISOString().split('T')[0];
   //slider elements
@@ -24,6 +24,7 @@ const Page = () => {
   const amountOfGuests = useRef(null);
   const priceInp = useRef(null);
   const payButton = useRef(null);
+
 
   let room;
   let images = [];
@@ -91,6 +92,7 @@ const Page = () => {
 
   useEffect(() => {
     //slider mechanics
+
     const handleArrowLeftClick = () => {
       currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
       imgRef.current.setAttribute('src', images[currentImageIndex]);
@@ -109,6 +111,13 @@ const Page = () => {
       const checkInValue = new Date(checkIn.current.value);
       const checkOutValue = new Date(checkOut.current.value);
       const amountOfGuestsValue = amountOfGuests.current.value;
+
+      const addInfo = (e) => {
+        e.preventDefault();
+        props.guests(amountOfGuestsValue);
+        localStorage.setItem('Guests', amountOfGuestsValue);
+      }
+      payButton.current.addEventListener('click', addInfo);
 
       validateCheckIn();
       validateCheckOut();
@@ -151,6 +160,8 @@ const Page = () => {
         } else {
           priceInp.current.textContent = 'Error';
         }
+        props.price(finalPrice);
+        localStorage.setItem('FinalyPrice', finalPrice);
         setIsCalculating(false);
       }, 1000);
     };
@@ -159,6 +170,8 @@ const Page = () => {
 
     arrowLeftRef.current.addEventListener('click', handleArrowLeftClick);
     arrowRightRef.current.addEventListener('click', handleArrowRightClick);
+
+
   }, []);
 
   useEffect(() => {
@@ -166,18 +179,6 @@ const Page = () => {
       checkOut.current.min = selectedCheckInDate.toISOString().split('T')[0];
     }
   }, [selectedCheckInDate]);
-
-  // useEffect(() => {
-
-  //   const addInfo = () => {
-  //     console.log(amountOfGuests.current.value);
-  //   }
-
-  //   payButton.current.addEventListener('click', addInfo);
-  //   return(() => {
-  //     payButton.current.removeEventListener('click', addInfo);
-  //   });
-  // }, [])
 
 
   return (
@@ -240,7 +241,9 @@ const Page = () => {
               <p className={style.priceInp}>
                 Final price: <span ref={priceInp}></span>
               </p>
-              <button ref={payButton} className={style.form__button}>Go to payment</button>
+              <a ref={payButton} className={style.form__button} href='/Best_hotel.de/payment'>
+                Go to payment
+              </a>
             </div>
             <button ref={button} type="submit" className={style.form__button}>
               {isCalculating ? 'Calculating...' : 'Check price'}

@@ -9,7 +9,7 @@ const Box = (props) => {
     useEffect(() => {
 
         const clickHandler = () => {
-            props.click();
+            console.log('click');
         }
 
         arrow.current.addEventListener('click', clickHandler);
@@ -22,7 +22,8 @@ const Box = (props) => {
     return(
         <div className={style.container}>
         <div className={style.container__data}>
-            <h2> {props.number}. {props.name}<img ref={arrow} src={arrowDown} alt="arrow Down" className={style.container__data__image} /></h2>
+            <h2> {props.number}. {props.name}</h2>
+            <img ref={arrow} src={arrowDown} alt="arrow Down" className={style.container__data__image} />
         </div>
         {/* <ClientsInfo />
         <Addtions /> */}

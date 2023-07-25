@@ -43,7 +43,7 @@ const Room = (props) => {
           <span className={style.people}>2 adults | 1 child below 7</span>
           <span className={style.name}>{props.hotel.first.name}</span>
           <span className={style.price}>from ${props.hotel.first.price} a night</span>
-          <Link className={style.a} to="/reservation">
+          <Link className={style.a} to="/Best_hotel.de/reservation">
             <button ref={roomOne} className={style.button}>Book now</button>
           </Link>
         </div>
@@ -54,7 +54,7 @@ const Room = (props) => {
           <span className={style.people}>2 adults | 1 child below 7</span>
           <span className={style.name}>{props.hotel.second.name}</span>
           <span className={style.price}>from ${props.hotel.second.price} a night</span>
-          <Link className={style.a} to="/reservation">
+          <Link className={style.a} to="/Best_hotel.de/reservation">
             <button ref={roomTwo} className={style.button}>Book now</button>
           </Link>
         </div>
@@ -65,7 +65,7 @@ const Room = (props) => {
           <span className={style.people}>2 adults | 1 child below 7</span>
           <span className={style.name}>{props.hotel.three.name}</span>
           <span className={style.price}>from ${props.hotel.three.price} a night</span>
-          <Link className={style.a} to="/reservation">
+          <Link className={style.a} to="/Best_hotel.de/reservation">
             <button ref={roomThree} className={style.button}>Book now</button>
           </Link>
         </div>
