@@ -1,11 +1,17 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import ClientsInfo from './ClientsInfo/ClientsInfo';
 import EditButton from './EditButton/EditButton';
-import AddButton from './AddButton/AddButton';
 
 const ClientInfo = () => {
   const guests = localStorage.getItem('Guests');
   const numGuests = parseInt(guests, 10);
+
+  const [guestData, setGuestData] = useState(Array.from({ length: numGuests }, () => ({
+    name: '',
+    surname: '',
+    email: '',
+    phone: '',
+  })));
 
   const [selectedGuestIndex, setSelectedGuestIndex] = useState(null);
 
@@ -13,9 +19,18 @@ const ClientInfo = () => {
     setSelectedGuestIndex((prevIndex) => (prevIndex === index ? null : index));
   };
 
+  const handleSaveData = (index, data) => {
+    setGuestData((prevData) => {
+      const newData = [...prevData];
+      newData[index] = data;
+      return newData;
+    });
+    setSelectedGuestIndex(null);
+  };
+
   return (
     <>
-      {Array.from({ length: numGuests }).map((_, index) => (
+      {guestData.map((guest, index) => (
         <div key={index}>
           <EditButton
             onClick={() => handleEditClick(index)}
@@ -25,6 +40,8 @@ const ClientInfo = () => {
             <ClientsInfo
               selectedGuestIndex={selectedGuestIndex}
               guests={numGuests}
+              data={guest}
+              onSaveData={(data) => handleSaveData(index, data)}
             />
           )}
         </div>

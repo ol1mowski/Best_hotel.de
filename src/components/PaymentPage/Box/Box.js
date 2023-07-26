@@ -7,9 +7,8 @@ const Box = (props) => {
     const arrow = useRef(null);
 
     useEffect(() => {
-
         const clickHandler = () => {
-            console.log('click');
+            props.click();
         }
 
         arrow.current.addEventListener('click', clickHandler);
@@ -17,7 +16,7 @@ const Box = (props) => {
         return(() => {
             arrow.current.removeEventListener('click', clickHandler);
         })
-    }, [])
+    }, [arrow])
 
     return(
         <div className={style.container}>

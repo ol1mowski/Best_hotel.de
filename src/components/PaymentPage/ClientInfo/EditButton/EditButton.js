@@ -1,19 +1,24 @@
+// EditButton.js
 import style from './EditButton.module.scss';
 import edit from '../../../../assets/icons/edit.svg';
 import { useEffect, useRef } from 'react';
 
 const EditButton = ({ onClick, name }) => {
-  const modifyButton = useRef(null);
+  const modifyButtonRef = useRef(null);
 
   useEffect(() => {
-    const click = () => {
-      onClick(); // Wywołujemy funkcję przekazaną przez props onClick
+    const clickHandler = () => {
+      onClick();
     };
 
-    modifyButton.current.addEventListener('click', click);
+    if (modifyButtonRef.current) {
+      modifyButtonRef.current.addEventListener('click', clickHandler);
+    }
 
     return () => {
-      modifyButton.current.removeEventListener('click', click);
+      if (modifyButtonRef.current) {
+        modifyButtonRef.current.removeEventListener('click', clickHandler);
+      }
     };
   }, [onClick]);
 
@@ -24,7 +29,7 @@ const EditButton = ({ onClick, name }) => {
           {name}
         </span>
         <img
-          ref={modifyButton}
+          ref={modifyButtonRef}
           className={style.clientsInfoContainer__client__img}
           src={edit}
           alt='Edit button'
