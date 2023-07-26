@@ -30,3 +30,11 @@
         }
     }
 }
+.container__wrapper {
+    .inactiveBox {
+      display: none;
+    }
+    .activeBox {
+      display: block;
+    }
+  }

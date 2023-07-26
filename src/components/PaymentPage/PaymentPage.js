@@ -8,27 +8,42 @@ import PaymentsMethod from './PaymentsMethod/PaymentsMethod';
 import MainContext from '../../Context/MainContext';
 
 const PaymentPage = (props) => {
-  const [show, setShow] = useState(true);
+  const [activeBox, setActiveBox] = useState(1);
 
-  const click = () => {
-    setShow((prevShow) => !prevShow);
+  const handleBoxClick = (number) => {
+    setActiveBox(number);
   };
 
   return (
     <div className={style.container}>
       <div className={style.container__wrapper}>
-        <Box click={click} name="Your Data" number={1} />
-        <div style={{ display: show ? 'block' : 'none' }}>
+        <Box
+          click={() => handleBoxClick(1)}
+          name="Your Data"
+          number={1}
+          isActive={activeBox === 1}
+        />
+        <div className={activeBox === 1 ? style.activeBox : style.inactiveBox}>
           <ClientInfo />
         </div>
 
-        <Box click={click} name="Additional" number={2} />
-        <div style={{ display: show ? 'block' : 'none' }}>
+        <Box
+          click={() => handleBoxClick(2)}
+          name="Additional"
+          number={2}
+          isActive={activeBox === 2}
+        />
+        <div className={activeBox === 2 ? style.activeBox : style.inactiveBox}>
           <Addtions />
         </div>
 
-        <Box click={click} name="Payment method" number={3} />
-        <div style={{ display: show ? 'block' : 'none' }}>
+        <Box
+          click={() => handleBoxClick(3)}
+          name="Payment method"
+          number={3}
+          isActive={activeBox === 3}
+        />
+        <div className={activeBox === 3 ? style.activeBox : style.inactiveBox}>
           <PaymentsMethod />
         </div>
       </div>

@@ -1,33 +1,28 @@
+import React, { useRef } from 'react';
 import style from './Box.module.scss';
 import arrowDown from '../../../assets/icons/arrow-down.svg';
-import { useEffect, useRef } from 'react';
 
-const Box = (props) => {
+const Box = ({ name, number, click, isActive }) => {
+  const arrow = useRef(null);
 
-    const arrow = useRef(null);
-
-    useEffect(() => {
-        const clickHandler = () => {
-            props.click();
-        }
-
-        arrow.current.addEventListener('click', clickHandler);
-
-        return(() => {
-            arrow.current.removeEventListener('click', clickHandler);
-        })
-    }, [arrow])
-
-    return(
-        <div className={style.container}>
-        <div className={style.container__data}>
-            <h2> {props.number}. {props.name}</h2>
-            <img ref={arrow} src={arrowDown} alt="arrow Down" className={style.container__data__image} />
-        </div>
-        {/* <ClientsInfo />
-        <Addtions /> */}
+  return (
+    <div
+      className={`${style.container} ${isActive ? style.active : ''}`}
+    >
+      <div className={style.container__data}>
+        <h2>
+          {number}. {name}
+        </h2>
+        <img
+          ref={arrow}
+          src={arrowDown}
+          alt="arrow Down"
+          className={style.container__data__image}
+          onClick={click}
+        />
+      </div>
     </div>
-    )
-}
+  );
+};
 
 export default Box;

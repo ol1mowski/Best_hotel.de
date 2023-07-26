@@ -10,24 +10,19 @@ const Addtions = (props) => {
     const list = useRef(null);
     const time = useRef(null);
     const time2 = useRef(null);
-
     const breakfast = useRef(null);
     const breakfastD = useRef(null);
     const all = useRef(null);
     const foodButton = useRef(null);
-
     const oneWayTo = useRef(null);
     const wayFrom = useRef(null);
     const hideWayToButton = useRef(null);
     const hideWayFromButton = useRef(null);
 
     const hotelBasicPrice = props.price;
-
     const [breakfastAdded, setBreakfastAdded] = useState(false);
     const [breakfastDinnerAdded, setBreakfastDinnerAdded] = useState(false);
     const [allInclusiveAdded, setAllInclusiveAdded] = useState(false);
-
-
     let priceA = 20;
     const [finalPrice, setFinalPrice] = useState(200);
 
@@ -36,7 +31,6 @@ const Addtions = (props) => {
         bd: 150,
         a: 300,
     };
-
 
     useEffect(() => {
 
@@ -149,8 +143,11 @@ const Addtions = (props) => {
         airportTrans.current.addEventListener('click', addAir);
 
         return () => {
-            airportTrans.current.removeEventListener('click', addAir);
-        };
+            if (airportTrans.current) {
+              airportTrans.current.removeEventListener('click', addAir);
+            }
+          };
+        
     }, [finalPrice]);
 
     useEffect(() => {
