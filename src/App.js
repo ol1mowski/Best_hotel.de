@@ -4,6 +4,7 @@ import HomePage from './HomePage/HomePage';
 import ReservationSite from './components/ReservationSite/ReservationSite';
 import PaymentPage from './components/PaymentPage/PaymentPage';
 import MainContext from './Context/MainContext';
+import AdditionalContext from './Context/adtional-context'; // Poprawiona nazwa importu
 
 const app = {
   width: '100vw',
@@ -11,44 +12,44 @@ const app = {
   backgroundColor: '#f4f1ed',
 };
 
-
-
 const App = () => {
   const [guests, setGuests] = useState(0);
   const [roomPrice, setRoomPrice] = useState(0);
+  const [food, setFood] = useState(0); // Dodane
+  const [transport, setTransport] = useState(0); // Dodane
 
   const getGuests = (guests) => {
-    // Aktualizujemy zarówno stan lokalny jak i kontekst
     setGuests(guests);
   };
 
   const getPrice = (price) => {
-    // Aktualizujemy zarówno stan lokalny jak i kontekst
     setRoomPrice(price);
   };
 
   return (
-    <MainContext.Provider
-      value={{
-        amountOfguests: guests,
-        finalyRoomPrice: roomPrice,
-      }}
-    >
-      <div style={app}>
-        <Router>
-          <Routes>
-            <Route path="/Best_hotel.de" element={<PaymentPage />} />
-            {/* Przekazujemy updateGuests i updatePrice do ReservationSite */}
-            <Route
-              path="/Best_hotel.de/reservation"
-              element={<ReservationSite price={getPrice} guests={getGuests} />}
-            />
-            <Route path="/Best_hotel.de/payment" element={<PaymentPage />} />
-            {/* Default route for the homepage */}
-          </Routes>
-        </Router>
-      </div>
-    </MainContext.Provider>
+    <AdditionalContext.Provider value={{ food, setFood, transport, setTransport }}> {/* Używamy kontekstu AdditionalContext */}
+      <MainContext.Provider
+        value={{
+          amountOfguests: guests,
+          finalyRoomPrice: roomPrice,
+        }}
+      >
+        <div style={app}>
+          <Router>
+            <Routes>
+              <Route path="/Best_hotel.de" element={<HomePage />} />
+              {/* Przekazujemy updateGuests i updatePrice do ReservationSite */}
+              <Route
+                path="/Best_hotel.de/reservation"
+                element={<ReservationSite price={getPrice} guests={getGuests} />}
+              />
+              <Route path="/Best_hotel.de/payment" element={<PaymentPage />} />
+              {/* Default route for the homepage */}
+            </Routes>
+          </Router>
+        </div>
+      </MainContext.Provider>
+    </AdditionalContext.Provider>
   );
 };
 

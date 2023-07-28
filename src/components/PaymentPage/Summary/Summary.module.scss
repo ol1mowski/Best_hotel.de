@@ -73,14 +73,15 @@
             &__remove {
                 width: 6vw;
                 height: 2vh;
-
             }
 
-            li {
+            &__li {
+                height: 2vh;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 gap: 2%;
+                margin-bottom: 2vh;
             }
         }
 

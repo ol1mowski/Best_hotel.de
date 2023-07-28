@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, lazy } from 'react';
+import React, { useRef, useEffect } from 'react';
 import HomeSiteTitle from './HomeSiteTitle/HomeSiteTitle';
 import MainVideo from '../../assets/main_video.mp4';
 import style from './HomeSite.module.scss';
@@ -45,13 +45,13 @@ const HomeSite = () => {
     width: '100%',
     height: '100%',
     objectFit: 'cover',
-    pointerEvents: 'none', // Dodaj tę właściwość, aby wyłączyć zdarzenia dla elementu wideo
+    pointerEvents: 'none',
   };
 
   return (
     <>
       <div style={background}>
-        <video onLoad={lazy} ref={videoRef} style={videoStyle} autoPlay muted loop playsInline>
+        <video ref={videoRef} style={videoStyle} autoPlay muted loop playsInline preload="auto">
           <source src={MainVideo} type="video/mp4" />
         </video>
       </div>
