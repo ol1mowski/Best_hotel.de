@@ -5,6 +5,7 @@ const AdditionalContext = createContext({
     transport: 0,
     setFood: () => {},
     setTransport: () => {},
+    paymentsMethod: '',
   });
   
 export default AdditionalContext;

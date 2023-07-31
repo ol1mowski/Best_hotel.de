@@ -6,7 +6,7 @@
     }
 
     &__payments {
-        height: 60%;
+        height: 50%;
         margin-left: 6%;
 
         @media screen and (min-width: 350px) {
@@ -125,4 +125,8 @@
             }
         }
     }
+}
+
+#spanLast {
+    margin: 0;
 }
