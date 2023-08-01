@@ -5,6 +5,7 @@ import ReservationSite from './components/ReservationSite/ReservationSite';
 import PaymentPage from './components/PaymentPage/PaymentPage';
 import MainContext from './Context/MainContext';
 import AdditionalContext from './Context/adtional-context'; // Poprawiona nazwa importu
+import PaymentPageMain from './components/PaymentPage/PaymentPageMain';
 
 const app = {
   width: '100vw',
@@ -37,13 +38,13 @@ const App = () => {
         <div style={app}>
           <Router>
             <Routes>
-              <Route path="/Best_hotel.de" element={<ReservationSite />} />
+              <Route path="/Best_hotel.de" element={<HomePage />} />
               {/* Przekazujemy updateGuests i updatePrice do ReservationSite */}
               <Route
                 path="/Best_hotel.de/reservation"
                 element={<ReservationSite price={getPrice} guests={getGuests} />}
               />
-              <Route path="/Best_hotel.de/payment" element={<PaymentPage />} />
+              <Route path="/Best_hotel.de/payment" element={<PaymentPageMain />} />
               {/* Default route for the homepage */}
             </Routes>
           </Router>

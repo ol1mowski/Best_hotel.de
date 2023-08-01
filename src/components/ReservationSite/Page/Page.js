@@ -112,8 +112,7 @@ const Page = (props) => {
       const checkOutValue = new Date(checkOut.current.value);
       const amountOfGuestsValue = amountOfGuests.current.value;
 
-      const addInfo = (e) => {
-        e.preventDefault();
+      const addInfo = () => {
         // props.guests(amountOfGuestsValue);
         localStorage.setItem('Guests', amountOfGuestsValue);
       }
@@ -171,12 +170,6 @@ const Page = (props) => {
     arrowLeftRef.current.addEventListener('click', handleArrowLeftClick);
     arrowRightRef.current.addEventListener('click', handleArrowRightClick);
 
-    return () => {
-      arrowLeftRef.current.removeEventListener('click', handleArrowLeftClick);
-      arrowRightRef.current.removeEventListener('click', handleArrowRightClick);
-    };
-
-
   }, [arrowLeft, arrowRight]);
 
   useEffect(() => {
@@ -184,6 +177,13 @@ const Page = (props) => {
       checkOut.current.min = selectedCheckInDate.toISOString().split('T')[0];
     }
   }, [selectedCheckInDate]);
+
+  const handlePaymentLinkClick = () => {
+    const finalPrice = localStorage.getItem('FinalyPrice');
+    console.log('Final Price:', finalPrice); // Sprawdź, czy poprawnie odczytuje cenę
+    // Tutaj możesz wykonać odpowiednie działania związane z przekierowaniem do strony płatności lub innych akcji
+  };
+
 
 
   return (
@@ -246,9 +246,10 @@ const Page = (props) => {
               <p className={style.priceInp}>
                 Final price: <span ref={priceInp}></span>
               </p>
-              <Link to={'/Best_hotel.de/payment'} ref={payButton} className={style.form__button}>
+              <Link to={'/Best_hotel.de/payment'} ref={payButton} onClick={handlePaymentLinkClick} className={style.form__button}>
                 Go to payment
               </Link>
+
             </div>
             <button ref={button} type="submit" className={style.form__button}>
               {isCalculating ? 'Calculating...' : 'Check price'}
