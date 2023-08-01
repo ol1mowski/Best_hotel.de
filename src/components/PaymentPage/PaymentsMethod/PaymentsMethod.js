@@ -21,6 +21,11 @@ const PaymentsMethod = () => {
         }
 
         cardPay.current.addEventListener('click', cardClickHandler);
+
+        return(() => {
+            cardPay.current.removeEventListener('click', cardClickHandler);
+        });
+
     }, [cardPay]);
 
     useEffect(() => {
@@ -31,6 +36,11 @@ const PaymentsMethod = () => {
         }
 
         blikPay.current.addEventListener('click', cardClickHandler);
+
+        return(() => {
+            blikPay.current.removeEventListener('click', cardClickHandler);
+        });
+
     }, [blikPay]);
 
     useEffect(() => {
@@ -41,6 +51,11 @@ const PaymentsMethod = () => {
         }
 
         cashPay.current.addEventListener('click', cardClickHandler);
+
+        return(() => {
+            cashPay.current.removeEventListener('click', cardClickHandler);
+        });
+
     }, [cashPay]);
 
     return (

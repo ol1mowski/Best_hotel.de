@@ -51,6 +51,7 @@ const PaymentPage = (props) => {
       <div className={style.container__summary}>
         <Summary price={props.price} guests={props.guests} />
       </div>
+      <p className={style.copy}>© Copyright 2023. Made by Oliwier Markiewicz</p>
     </div>
   );
 };

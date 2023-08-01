@@ -56,6 +56,7 @@
         @media screen and (min-width: 1700px) {
             width: 70%;
         }
+
         height: 80%;
         gap: 3vh;
         margin-top: 3vh;
@@ -102,14 +103,8 @@
             }
 
             @media screen and (min-width: 1200px) {
-                width: 9vw;
-            }
-
-            @media screen and (min-width: 1200px) {
-                margin: 5vh 2vw;
-            }
-            @media screen and (min-width: 1200px) {
                 margin: 5vh 1.5vw;
+                width: 9vw;
             }
         }
 
@@ -156,6 +151,7 @@
             height: 90%;
             gap: 8%;
             flex-direction: column;
+
         }
 
         &__box,
@@ -194,6 +190,10 @@
                     padding: .7rem .5rem;
                 }
 
+                @media screen and (min-width: 1024px) {
+                    width: 35%;
+                }
+
                 &__breakfast {
                     display: block;
                     padding: 0.75rem 1rem;
@@ -209,6 +209,9 @@
 
                     @media screen and (min-width: 350px) {
                         margin-top: 10%;
+                    }
+                    @media screen and (min-width: 1024px) {
+                        width: 35%;
                     }
                 }
             }

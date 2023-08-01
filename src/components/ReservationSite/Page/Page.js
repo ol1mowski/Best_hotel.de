@@ -114,7 +114,7 @@ const Page = (props) => {
 
       const addInfo = (e) => {
         e.preventDefault();
-        props.guests(amountOfGuestsValue);
+        // props.guests(amountOfGuestsValue);
         localStorage.setItem('Guests', amountOfGuestsValue);
       }
       payButton.current.addEventListener('click', addInfo);
@@ -160,7 +160,7 @@ const Page = (props) => {
         } else {
           priceInp.current.textContent = 'Error';
         }
-        props.price(finalPrice);
+        // props.price(finalPrice);
         localStorage.setItem('FinalyPrice', finalPrice);
         setIsCalculating(false);
       }, 1000);
@@ -171,8 +171,13 @@ const Page = (props) => {
     arrowLeftRef.current.addEventListener('click', handleArrowLeftClick);
     arrowRightRef.current.addEventListener('click', handleArrowRightClick);
 
+    return () => {
+      arrowLeftRef.current.removeEventListener('click', handleArrowLeftClick);
+      arrowRightRef.current.removeEventListener('click', handleArrowRightClick);
+    };
 
-  }, []);
+
+  }, [arrowLeft, arrowRight]);
 
   useEffect(() => {
     if (selectedCheckInDate) {
@@ -241,9 +246,9 @@ const Page = (props) => {
               <p className={style.priceInp}>
                 Final price: <span ref={priceInp}></span>
               </p>
-              <a ref={payButton} className={style.form__button} href='/Best_hotel.de/payment'>
+              <Link to={'/Best_hotel.de/payment'} ref={payButton} className={style.form__button}>
                 Go to payment
-              </a>
+              </Link>
             </div>
             <button ref={button} type="submit" className={style.form__button}>
               {isCalculating ? 'Calculating...' : 'Check price'}

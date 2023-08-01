@@ -37,7 +37,7 @@ const App = () => {
         <div style={app}>
           <Router>
             <Routes>
-              <Route path="/Best_hotel.de" element={<PaymentPage />} />
+              <Route path="/Best_hotel.de" element={<ReservationSite />} />
               {/* Przekazujemy updateGuests i updatePrice do ReservationSite */}
               <Route
                 path="/Best_hotel.de/reservation"

@@ -71,8 +71,29 @@
             padding: 0;
 
             &__remove {
-                width: 6vw;
+                width: 5vw;
                 height: 2vh;
+                @media screen and (min-width: 550px) {
+                    width: 4vw;   
+                }
+                @media screen and (min-width: 600px) {
+                    width: 3.8vw;
+                }
+                @media screen and (min-width: 700px) {
+                    width: 3.2vw;
+                }
+                @media screen and (min-width: 800px) {
+                    width: 2.8vw;
+                }
+                @media screen and (min-width: 1024px) {
+                    width: 2vw;
+                }
+                @media screen and (min-width: 1400px) {
+                    width: 1.4vw;
+                }
+                @media screen and (min-width: 1750px) {
+                    width: 1vw;
+                }
             }
 
             &__li {

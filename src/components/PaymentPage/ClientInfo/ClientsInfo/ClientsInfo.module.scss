@@ -13,7 +13,7 @@
   }
 
   &__form {
-    height: 52vh;
+    height: 100%;
     width: 80%;
     margin: 0 10%;
     padding: 7% 5%;
@@ -26,9 +26,6 @@
       width: 70%;
     }
 
-    @media screen and (min-width: 400px) {
-      height: 55vh;
-    }
 
     @media screen and (min-width: 475px) {
       width: 60%;
