@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Best_hotel.de/static/css/main.aab6ca28.css",
-    "main.js": "/Best_hotel.de/static/js/main.df470a4f.js",
+    "main.js": "/Best_hotel.de/static/js/main.b758c305.js",
     "static/js/787.c1112931.chunk.js": "/Best_hotel.de/static/js/787.c1112931.chunk.js",
     "static/media/main_video.mp4": "/Best_hotel.de/static/media/main_video.399f86c9af22569f66a0.mp4",
     "static/media/hotel_room.png": "/Best_hotel.de/static/media/hotel_room.9989e70380e8edceac05.png",
@@ -34,11 +34,11 @@
     "static/media/location.svg": "/Best_hotel.de/static/media/location.2e0ef750ef3975644482ba424ba65ae0.svg",
     "static/media/telephone.svg": "/Best_hotel.de/static/media/telephone.97b3a6ef5f6a999380bead626212f45f.svg",
     "main.aab6ca28.css.map": "/Best_hotel.de/static/css/main.aab6ca28.css.map",
-    "main.df470a4f.js.map": "/Best_hotel.de/static/js/main.df470a4f.js.map",
+    "main.b758c305.js.map": "/Best_hotel.de/static/js/main.b758c305.js.map",
     "787.c1112931.chunk.js.map": "/Best_hotel.de/static/js/787.c1112931.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.aab6ca28.css",
-    "static/js/main.df470a4f.js"
+    "static/js/main.b758c305.js"
   ]
 }
