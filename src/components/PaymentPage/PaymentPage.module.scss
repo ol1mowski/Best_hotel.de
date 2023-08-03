@@ -45,5 +45,8 @@
     padding: 3vh 0;
     font-size: .8rem;
     margin-top: 5vh;
+    @media (orientation: landscape) and (min-width: 320px) and (max-width: 950px) {
+        padding: 2vh 0;
+    }
   }
   

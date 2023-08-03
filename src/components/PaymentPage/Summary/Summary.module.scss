@@ -18,6 +18,9 @@
     @media screen and (min-width: 1700px) {
         top: -35%;
     }
+    @media (orientation: landscape) and (min-width: 320px) and (max-width: 950px) {
+        height: 70vh;
+    }
 
     h2 {
         margin-bottom: 5%;
@@ -94,6 +97,10 @@
                 @media screen and (min-width: 1750px) {
                     width: 1vw;
                 }
+                @media (orientation: landscape) and (min-width: 320px) and (max-width: 950px) {
+                    width: 2vw;
+                    height: 4vh;
+                }
             }
 
             &__li {
@@ -103,6 +110,9 @@
                 align-items: center;
                 gap: 2%;
                 margin-bottom: 2vh;
+                @media (orientation: landscape) and (min-width: 320px) and (max-width: 950px) {
+                    margin-bottom: 5vh;
+                }
             }
         }
 
