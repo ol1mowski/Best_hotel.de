@@ -85,6 +85,10 @@
                 width: 50%;
                 margin-left: 10%;
             }
+            @media (orientation: landscape) and (min-width: 320px) and (max-width: 950px) {
+                width: 40%;
+                margin-left: 10%;
+            }
         }
 
         &__card {

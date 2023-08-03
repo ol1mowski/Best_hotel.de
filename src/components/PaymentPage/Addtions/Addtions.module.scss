@@ -56,6 +56,9 @@
         @media screen and (min-width: 1700px) {
             width: 70%;
         }
+        @media (orientation: landscape) and (min-width: 320px) and (max-width: 950px) {
+            height: 100%;
+        }
 
         height: 80%;
         gap: 3vh;
@@ -105,6 +108,10 @@
             @media screen and (min-width: 1200px) {
                 margin: 5vh 1.5vw;
                 width: 9vw;
+            }
+            @media (orientation: landscape) and (min-width: 320px) and (max-width: 950px) {
+                width: 15vw;
+                height: 12vh;
             }
         }
 
@@ -172,6 +179,11 @@
             @media screen and (min-width: 400px) {
                 width: 100%;
             }
+            
+            @media (orientation: landscape) and (min-width: 320px) and (max-width: 950px) {
+                height: 100%;
+                padding: 10%;
+            }
 
             &__button {
                 display: block;
@@ -193,6 +205,9 @@
                 @media screen and (min-width: 1024px) {
                     width: 35%;
                 }
+                @media (orientation: landscape) and (min-width: 320px) and (max-width: 950px) {
+                    margin-top: 10%;
+                }
 
                 &__breakfast {
                     display: block;
@@ -213,12 +228,16 @@
                     @media screen and (min-width: 1024px) {
                         width: 35%;
                     }
+                    
                 }
             }
         }
 
         &__second {
             height: 30vh;
+            @media (orientation: landscape) and (min-width: 320px) and (max-width: 950px) {
+                height: 100%;
+            }
         }
     }
 }
