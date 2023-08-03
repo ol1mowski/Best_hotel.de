@@ -25,6 +25,10 @@
         width: 40%;
         height: 17vh;
     }
+    @media (orientation: landscape) and (min-width: 320px) and (max-width: 950px)  {
+        width: 30%;
+        height: 45vh;
+    } 
     &__client {
         padding-top: 5%;
         display: flex;

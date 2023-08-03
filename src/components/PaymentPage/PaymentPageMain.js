@@ -8,7 +8,7 @@ const PaymentPageMain = () => {
 
     setTimeout(() => {
         Setloading(false);
-    }, 1000)
+    }, 1000)  
 
     return (
         <>
